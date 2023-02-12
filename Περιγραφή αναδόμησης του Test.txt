@@ -1,0 +1,192 @@
+Τα αποτελέσματα εκτέλεσης όλων των εκδόσεων του test.rar με όλους τους
+συνδυασμούς παραμέτρων εκτέλεσης.
+
+				initial	A1_0	A1_1	A1_2	A1_3
+undergraduate_winter_online  = 	1500	1500	1500	1500	1500
+undergraduate_winter_offline = 	1250	1250	1250	1250	1250
+undergraduate_summer 	     = 	1400	1400	1400	1400	1400
+postgraduate_summer_offline  = 	2500	2500	2500	2500	2500
+postgraduate_summer_online   = 	1800	1800	1800	1800	1800
+postgraduate_winter_offline  = 	2200	2200	2200	2200	2200
+postgraduate_winter_online   = 	1600	1600	1600	1600	1600
+phd                          = 	3000	3000	3000	3000	3000
+
+Αποσυμπίεσα το testPolymorphism.rar και το έκανα import project στο eclipse.
+Έσβησα όλα τα σχόλια, κενές γραμμές και μετέφερα τα άγκιστρα των μεθόδων
+στην μορφή που είναι η καθορισμένη. Το εκτελώ και βγάζω τον παραπάνω πίνακα
+για την Initial έκδοση και το αποθηκεύω στην A1_0 ελέγχοντας ότι δουλεύει
+και όντως δουλεύει.
+
+Ποιό συγκεκριμένα έχει 2 κλάσεις:
+Main		-> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University	-> 52 γραμμές 2 μέθοδοι 6 if/switch 0 for/while
+
+Παρατηρώ ότι στην κλάση University η μέθοδος getTuitionFees όχι μόνο είναι
+τεράστια, αλλά έχει 6 διαφορετικά if/switch loops και επίσης συμπεριφέρεται
+διαφορετικά από την υπογραφή της κλάσης University.
+Λύση είναι η μεταφορά των εντολών που βρίσκονται εντός του πρώτου επιπέδου
+των if/switch σε άλλες μεθόδους, τις undergraduate, postgraduate και psd
+και επίσης αυτές τις μεθόδους σε μία νέα κλάση, την Tuition για να αυξηθεί
+η συνεκτικότητα του προγράμματος. Πρόσθεσα την κλήση της κλάσης Tuition από
+την University. Το αποθηκεύω με όνομα A1_1 και το εκτελώ και τα
+αποτελέσματα ταυτίζονται με την αρχική της έκδοση.
+
+Ποιό συγκεκριμένα έχει 3 κλάσεις:
+Main		-> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University	-> 32 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+Tuition		-> 40 γραμμές 3 μέθοδοι 5 If/switch 0 for/while
+
+Παρατηρώ ότι στην κλάση University η μέθοδος getTuitionFees είναι σε σωστό
+μέγεθος. Άρα πηγαίνω στην κλάση Tuition και παρατηρώ ότι οι 2 από ις 3 
+μεθόδους έχουν 2 επίπεδα εμφωλευμένα if/switch loops. Έτσι εξήγαγα τις 
+εντολές μέσα στα εξωτερικά if/switch loops σε νέες μεθόδους, τις 
+onlineWinterUnder, unonlineSummerPost και unonlineWinterPost. Αποθηκεύω το
+πρότζεκτ με όνομα A1_2 και το εκτελώ και τα αποτελέσματα ταυτίζονται με την
+αρχική της έκδοση.
+
+Ποιό συγκεκριμένα έχει 3 κλάσεις:
+Main		-> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University	-> 32 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+Tuition		-> 52 γραμμές 6 μέθοδοι 5 If/switch 0 for/while
+
+Παρατηρώ οτι η κλάση Tuition έχει πολλές μεθόδους. Σωστό είναι να εξαχθούν
+οι 3 μέθοδοι και συγκεκριμένα οιonlineWinterUnder, unonlineSummerPost και
+unonlineWinterPost σε μία νέα κλάση, την UnOnlineSemesterGraduate. Καλώ την
+παραπάνω κλάση στις 2 πρώτες μεθόδους της κλάσης Tuition. Αποθηκεύω το 
+project με όνομα Α1_3 και το εκτελώ και τα αποτελέσματα ταυτίζονται με την
+ατχική της έκδοση.
+
+Ποιό συγκεκριμένα έχει 4 κλάσεις:
+Main			 -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		 -> 32 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+Tuition			 -> 28 γραμμές 3 μέθοδοι 2 If/switch 0 for/while
+UnOnlineSemesterGraduate -> 26 γραμμές 3 μέθοδοι 3 if/switch 0 for/while
+
+Ανοίγω το A1_3 και παρατηρώ ότι παρόλο που ομαδοποίησα τον κώδικα σε κλάσεις
+Main, University, Tuition και UnOnlineSemesterGraduate και επίσης ότι στην
+Tuition έχω ομαδοποιήσει τις μεθόδους σε undergraduate, postgraduate και psd
+παρατηρώ ότι υπάρχει ο ίδιος αριθμός των εντολών if/switch. Κάτι πρέπει να
+κάνω για να εξαλειφθεί αυτό το πρόβλημα. Καταρχάς κάνω την κλάση Tuition
+abstract και εξάγω τις 3 μεθόδους σε 3 διαφορετικές κλάσεις με το όνομα των
+μεθόδων τους και τις κάνω να κληρονομούν την Tuition κλάση. Υπενθυμίζω ότι
+λόγω της κληρονομικότητας οι υποκλάσεις δεν χρειάζεται να έχουν δικές τους
+παραμέτρους/μεταβλητές επειδή τις κληρονομούν από την Tuition. Επίσης 
+υπενθυμίζω ότι οι παραμέτροι έγιναν protected.
+Στην κλάση University έσβησα την εντολή Tuition t = new Tuition() επειδή 
+αυτή η κλάση είναι abstract και έτσι την κλήση των κλάσεων και μεθόδων την
+έκανα εντός της μεθόδου getTuitionFees μέσα στις εντολές if/switch που 
+καλούν απευθείας την κλάση πληρωμής μαζί με την μέθοδο τους. Το αποθηκεύω με
+όνομα A1_4 και το αποτέλεσμα εκτέλεσης παραμένει σωστό.
+
+Ποιό συγκεκριμένα έχει 7 κλάσεις:
+Main			 -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		 -> 34 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+Tuition			 -> 28 γραμμές 0 μέθοδοι 0 If/switch 0 for/while
+Undergraduate		 -> 11 γραμμές 1 μέθοδος 1 if/switch 0 for/while
+Postgraduate		 -> 11 γραμμές 1 μέθοδος 1 if/switch 0 for/while
+PHD			 ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UnOnlineSemesterGraduate -> 26 γραμμές 3 μέθοδοι 3 if/switch 0 for/while
+
+Ανοίγω το A1_4 και σβήνω την κλάση UnOnlineSemesterGraduate και μεταφέρνω
+όλες τις εντολές στις κλάσεις Undergraduate και Postgraduate. Το αποθηκεύω 
+με όνομα A1_5 και η εκτέλεση παραμένει ορθή.
+
+Ποιό συγκεκριμένα έχει 7 κλάσεις:
+Main			 -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		 -> 34 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+Tuition			 -> 28 γραμμές 0 μέθοδοι 0 If/switch 0 for/while
+Undergraduate		 -> 16 γραμμές 1 μέθοδος 2 if/switch 0 for/while
+Postgraduate		 -> 21 γραμμές 1 μέθοδος 3 if/switch 0 for/while
+PHD			 ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+
+Ανοίγω το Α1_5 και προσθέω υποκλάσεις που στην πραγματικότητα είναι όλοι οι
+συνδυασμοί των πληρωμών ανά φοιτητή. Αυτές καλούνται από τις υπερκλάσεις
+Undergraduate και Postgraduate και έχουν ως κοινή μέθοδο, την getTuitionFees
+όπου επιστρέφει διαφορετική τιμή ανά κλάση. Μπορεί να μην εμφανίζει 
+αποτελέσματα εκτέλεσης αλλά το αποθηκεύω με όνομα Α1_6.
+
+Ποιό συγκεκριμένα έχει 13 κλάσεις:
+Main			   -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PHD			   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Postgraduate		   -> 30 γραμμές 2 μέθοδοι 3 if/switch 0 for/while
+PostgraduateSummerOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateSummerOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Tuition			   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Undergraduate		   -> 24 γραμμές 2 μέθοδοι 2 if/switch 0 for/while
+UndergraduateSummer	   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOffline ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOnline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		   -> 23 γραμμές 2 μέθοδοι 1 if/switch 0 for/while
+
+Ανοίγω το Α1_6 και επαναφέρω τα εμφωλευμένα if/switch μόνο που αντί για 
+εκτέλεση εντός του if/switch εκτελείται η κατέλληλη υποκλάση με την μέθοδο
+της. Είναι σαν να επέστρεψα στο Α1_0 και να δημιούργησα την αφηρημένη κλάση
+Tuition και τις υποκλάσεις της που καλούν την αφηρημένη μέθοδο και 
+επιστρέφουν την τιμή της result. Μεταφέρω το Winter και το online στην Main 
+για καλύτερη κλήση του προγράμματος. Στο κλάση απλά κάνω system.out.println
+την κλήση των μεθόδων κλάσεων για εμφάνιση Το αποθηκεύω με όνομα A1_7 και τα
+αποτελέσματα της εκτέλεσης είναι εμφανίζονται πάλι σωστά.
+
+Ποιό συγκεκριμένα έχει 13 κλάσεις:
+Main			   -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PHD			   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Postgraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+PostgraduateSummerOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateSummerOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Tuition			   ->  5 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Undergraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+UndergraduateSummer	   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOffline ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOnline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		   -> 59 γραμμές 2 μέθοδοι 6 if/switch 0 for/while
+
+Ανοίγω το Α1_7 και στην κλάση Tuition προσθέτω μία μέθοδο, την 
+printTuitionFees όπου εμφανίζει τις τιμές που επιστρέφουν οι μέθοδοι
+getTuitionFees. Στην κλάση Main αλλάζω το uni.setType ξανά και εδώ αμέσως
+προσθέτω την υποκλάση που θέλω για επιστροφή του αποτελέσματος. Για 
+παράδειγμα θέλω να εμφανίσω την τιμή φοίτησης του διδακτορικού. Αρα βάζω εδώ
+new PHD(). Στην κλάση University αλλάζω το setType() για να χειρίζεται μόνο
+μία ArrayList όπου αυτή αντιπροσωπεύει την υπερκλάση Tuition όπου αυτή την
+χειρίζονται οι υποκλάσεις κατηγορίας φοίτητης. Εδω μόνο προσθέτει κάθε φορά
+που στην Main κάνω uni.setType() τον νέο φοιτητή. Στην συνέχεια προσθέτω μία
+μέθοδο, την printTuitionFees(), όπου είναι ταυτόσημη με αυτήν στην Tuition.
+Εδώ διαβάζει ένα ένα φοιτητή και εμφανίζει το αποτέλεσμα των διδάκτρων του
+κάθε φοιτητή. Φυσικά έσβησα όλες τις γραμμές κώδικα επειδή δεν χρειάζονται
+πλέον. Το αποθηκεύω με όνομα A1_8 και εκτελείται σωστά.
+
+Ποιό συγκεκριμένα έχει 13 κλάσεις:
+Main			   -> 10 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PHD			   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Postgraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+PostgraduateSummerOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateSummerOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Tuition			   ->  9 γραμμές 2 μέθοδος 0 if/switch 0 for/while
+Undergraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+UndergraduateSummer	   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOffline ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOnline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		   -> 15 γραμμές 2 μέθοδοι 0 if/switch 1 for/while
+
+Τέλος κάνω και μία έκδοση A1_9 για επείδηξη όλων των πιθανών συνδυασμών των
+φοιτητών και έλεγχος ορθότητας προγράμματος όπου όντως δουλεύουν.
+
+Ποιό συγκεκριμένα έχει 13 κλάσεις:
+Main			   -> 17 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PHD			   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Postgraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+PostgraduateSummerOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateSummerOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOffline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+PostgraduateWinterOnline   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+Tuition			   ->  9 γραμμές 2 μέθοδος 0 if/switch 0 for/while
+Undergraduate		   ->  4 γραμμές 0 μέθοδοι 0 if/switch 0 for/while
+UndergraduateSummer	   ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOffline ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+UndergraduateWinterOnline  ->  8 γραμμές 1 μέθοδος 0 if/switch 0 for/while
+University		   -> 15 γραμμές 2 μέθοδοι 0 if/switch 1 for/while
