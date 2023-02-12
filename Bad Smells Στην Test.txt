@@ -1,0 +1,45 @@
+Έκδοση Α1_0
+
+Παρατηρώ Bad Smells τύπου Type Checking και μας λέει να σβήσουμε όλα τα If
+εντός της μεθόδου getTuitionFees εντός της κλάσης University. Τα average
+statements εδώ είναι 4,333.
+
+Έκδοση Α1_1
+
+Το ίδιο Bad Smell με την προηγούμενη έκδοση αλλά τα average statements είναι
+1.
+
+Έκδοση Α1_2
+
+Το ίδιο Bad Smell με ακριβώς τα ίδια average statements με την έκδοση Α1_1.
+
+Έκδοση Α1_3
+
+Το Bad Smell τύπου Type Checking είναι ακριβώς το ίδιο με την έκδοση Α1_2.
+Το Bad Smell τύπου Feature Envy μας λέει να σβήσουμε τελείως την μέθοδο
+postgraduate από την κλάση Tuition.
+
+Έκδοση Α1_4
+
+Το Bad Smell τύπου Type Checking είναι ακριβώς το ίδιο με την έκδοση Α1_3
+με την διαφορά ότι το average statements είναι 2.
+
+Έκδοση Α1_5
+
+Το Bad Smell τύπου Type Checking είναι ακριβώς το ίδιο με την έκδοση Α1-4.
+
+Έκδοση Α1_6
+
+Το Bad Smell τύπου Type Checking είναι ακριβώς το ίδιο με την έκδοση Α1-5.
+
+Έκδοση Α1_7
+
+Το Bad Smell τύπου God Class παρατηρώ ότι στην κλάση University πρέπει να
+φύγουν όλες οι μεταβλητές που περιγράφουν τύπο φοίτησης, εξάμηνο και Online.
+Επίσης πρέπει να σβηστεί η μέθοδος setType αυτής της κλάσης.
+Το Bad Smell τύπου Type Checking είναι ακριβώς το ίδιο με την έκδοση Α1_6 με
+την διαφορά ότι το average statements είναι 4,666.
+
+Έκδοση Α1_8 και Α1_9
+
+Δεν υπάρχουν Bad Smells.
